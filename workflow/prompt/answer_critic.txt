@@ -1,0 +1,4 @@
+답변이 질문을 잘 설명하고 있는지 확인하고 Y/N중 하나를 리턴해줘.\n
+질문:\n{question}\n
+재작성된 질문:\n{paraphrased_question}\b
+답변:\n{answer}

@@ -1,0 +1,32 @@
+질문: {question}
+재작성된 질문: {paraphrased_question}
+질문 ID: {question_id}
+
+[목표]
+- 질문과 관련된 일반적인 컴퓨터 공학(CS) 키워드를 최대 3개 추출하세요.
+- 단, 이미 도출된 프레임워크 이름은 제외하고, 기술 개념/명사형 키워드만 포함하세요.
+- 예: "Virtual Memory", "Deadlock", "Indexing", "Encapsulation" 등
+
+[도구 사용]
+- get_general_keyword_docs: 키워드에 대한 공식 URL 및 HTML 본문을 가져옵니다.
+- embed_general_docs: 가져온 HTML을 general 컬렉션에 임베딩합니다.
+- similarity_search: 벡터 DB에서 질문과 관련된 내용을 검색하고 요약합니다.
+
+[결과 조건]
+- 벡터 DB에서 검색된 문서 내용 중 질문과 관련성이 높은 정보를 300자 이하로 요약하세요.
+- 문장의 출처 URL과 함께 다음 형식으로 JSON 배열로 출력하세요.
+
+[출력 예시]
+[
+    {{
+        "url": "https://en.wikipedia.org/wiki/Deadlock",
+        "txt": "Deadlock은 두 개 이상의 프로세스가 서로 자원을 기다리며 무한정 대기 상태에 빠지는 현상입니다...",
+        "success": "Y"
+    }},
+    ...
+]
+
+[주의사항]
+- 프레임워크 키워드는 포함하지 마세요.
+- 벡터 DB에 임베딩되지 않은 경우에도, 임베딩을 먼저 수행한 후 반드시 similarity_search로 요약하세요.
+- 반드시 JSON 배열 형태로만 출력하고 다른 문장은 포함하지 마세요.
