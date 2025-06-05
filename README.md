@@ -33,6 +33,21 @@
 
 <br>
 
+
+## 동영상 / 스크린샷
+### 정상 흐름
+
+https://github.com/user-attachments/assets/8018a2ca-47ef-4e49-b452-1c7827880c38
+
+### 비정상 흐름 : 임베딩된 레퍼런스가 없는 경우
+   - 안내 메시지와 함께 백그라운드 큐에 크롤링 - 임베딩 작업 등록 <br>
+<img width="459" alt="363fb4d026114a59b943e724819bdf59_2586" src="https://github.com/user-attachments/assets/cb90bf28-8fb8-4501-a8df-d6a42947af57" />
+
+   - 새로고침 후 사이드바에서 질문, 질문에 필요한 공식 문서 리스트 확인 가능 <br>
+<img width="447" alt="3d5c7fd400b54f968ad525ab2f0f8d49_2714" src="https://github.com/user-attachments/assets/da7e1c67-5f71-4760-8184-344afcccba6c" />
+
+<br>
+
 ## 기술 구성
 **1) Prompt Engineering**
 
